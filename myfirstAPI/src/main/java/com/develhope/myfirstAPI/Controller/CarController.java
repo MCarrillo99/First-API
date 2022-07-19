@@ -21,6 +21,7 @@ public class CarController {
 
     @PostMapping("/cars")
     public ResponseEntity<String> postCar(@Valid @RequestBody CarDTO car){
+        System.out.println(car.toString());
         return new ResponseEntity<>("a new car was been created ",HttpStatus.CREATED) ;
     }
 
